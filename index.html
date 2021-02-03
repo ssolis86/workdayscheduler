@@ -30,79 +30,221 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <div class="row present">
-        <div>9AM</div>
-        <div class="time-block">
-          <textarea></textarea>
+      <div class="row">
+        <div class="time col-md-1">9AM</div>
+        <div id="9" class="time-block col-md-10">
+          <textarea class="float-left col-md-10" id="nineNote"></textarea>
         </div>
-        <div class="saveBtn">Save Button</div>
+        <div class="col-md-1">
+          <button id="saveBtn9" class="saveBtn">Save Button</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1">10AM</div>
+        <div id="10" class="time-block col-md-10">
+          <textarea class="float-left col-md-10" id="tenNote"></textarea>
+        </div>
+        <div class="col-md-1">
+          <button id="saveBtn10" class="saveBtn">Save Button</button>
+        </div>
       </div>
       <div class="row ">
-        <div>10AM</div>
-        <div class="time-block">
-          <textarea></textarea>
+        <div class="col-md-1">11AM</div>
+        <div id="11" class="time-block col-md-10">
+          <textarea class="float-left col-md-10" id="elevenNote"></textarea>
         </div>
-        <div class="saveBtn">Save Button</div>
+        <div class="col-md-1">
+          <button id="saveBtn11" class="saveBtn">Save Button</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1">12PM</div>
+        <div id="12" class="time-block col-md-10">
+          <textarea class="float-left col-md-10" id="twelveNote"></textarea>
+        </div>
+        <div class="col-md-1">
+          <button id="saveBtn12" class="saveBtn"> Save Button</button>
+        </div>
       </div>
       <div class="row ">
-        <div>11AM</div>
-        <div class="time-block">
-          <textarea></textarea>
+        <div class="col-md-1">1PM</div>
+        <div id="13" class="time-block col-md-10">
+          <textarea class="float-left col-md-10" id="oneNote"></textarea>
         </div>
-        <div class="saveBtn">Save Button</div>
+        <div class="col-md-1">
+          <button id="saveBtn1" class="saveBtn"> Save Button</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-1">2PM</div>
+        <div id="14" class="time-block col-md-10">
+          <textarea class="float-left col-md-10" id="twoNote"></textarea>
+        </div>
+        <div class="col-md-1">
+          <button id="saveBtn2" class="saveBtn"> Save Button</button>
+        </div>
       </div>
       <div class="row ">
-        <div>11AM</div>
-        <div class="time-block">
-          <textarea></textarea>
+        <div class="col-md-1">3PM</div>
+        <div id="15" class="time-block col-md-10">
+          <textarea class="float-left col-md-10" id="threeNote"></textarea>
         </div>
-        <div class="saveBtn">Save Button</div>
+        <div class="col-md-1">
+          <button id="saveBtn3" class="saveBtn"> Save Button</button>
+        </div>
       </div>
       <div class="row ">
-        <div>12AM</div>
-        <div class="time-block">
-          <textarea></textarea>
+        <div class="col-md-1">4PM</div>
+        <div id="16" class="time-block col-md-10">
+          <textarea class="float-left col-md-10" id="fourNote"></textarea>
         </div>
-        <div class="saveBtn">Save Button</div>
+        <div class="col-md-1">
+          <button id="saveBtn4" class="saveBtn"> Save Button</button>
+        </div>
       </div>
       <div class="row ">
-        <div>1PM</div>
-        <div class="time-block">
-          <textarea></textarea>
+        <div class="col-md-1">5PM</div>
+        <div id="17" class="time-block col-md-10">
+          <textarea class="float-left col-md-10" id="fiveNote"></textarea>
         </div>
-        <div class="saveBtn">Save Button</div>
+        <div class="col-md-1">
+          <button id="saveBtn5" class="saveBtn"> Save Button</button>
+        </div>
       </div>
       <div class="row ">
-        <div>2PM</div>
-        <div class="time-block">
-          <textarea></textarea>
+        <div class="col-md-1">6PM</div>
+        <div id="18" class="time-block col-md-10">
+          <textarea class="float-left col-md-10" id="sixNote"></textarea>
         </div>
-        <div class="saveBtn">Save Button</div>
-      </div>
-      <div class="row ">
-        <div>3PM</div>
-        <div class="time-block">
-          <textarea></textarea>
+        <div class="col-md-1">
+          <button id="saveBtn6" class="saveBtn"> Save Button</button>
         </div>
-        <div class="saveBtn">Save Button</div>
-      </div>
-      <div class="row ">
-        <div>4PM</div>
-        <div class="time-block">
-          <textarea></textarea>
-        </div>
-        <div class="saveBtn">Save Button</div>
-      </div>
-      <div class="row ">
-        <div>5PM</div>
-        <div class="time-block">
-          <textarea></textarea>
-        </div>
-        <div class="saveBtn">Save Button</div>
       </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+        
+          var timeNow = moment().format('LLLL');
+          var todaysDate = document.getElementById("currentDay");
+          todaysDate.textContent = timeNow;
+          
+           
+          
+          
+        })
+          var savedNineNote = document.querySelector("#nineNote");
+          var savedTenNote = document.querySelector("#tenNote");
+          var savedElevenNote = document.querySelector("#elevenNote");
+          var savedTwelveNote = document.querySelector("#twelveNote");
+          var savedOneNote = document.querySelector("#oneNote");
+          var savedTwoNote = document.querySelector("#twoNote");
+          var savedThreeNote = document.querySelector("#threeNote");
+          var savedFourNote = document.querySelector("#fourNote");
+          var savedFiveNote = document.querySelector("#fiveNote");
+          var savedSixNote = document.querySelector("#sixNote");
+          var saveBtn9 = document.querySelector("#saveBtn9");
+          var saveBtn10 = document.querySelector("#saveBtn10");
+          var saveBtn11 = document.querySelector("#saveBtn11");
+          var saveBtn12 = document.querySelector("#saveBtn12");
+          var saveBtn1 = document.querySelector("#saveBtn1");
+          var saveBtn2 = document.querySelector("#saveBtn2");
+          var saveBtn3 = document.querySelector("#saveBtn3");
+          var saveBtn4 = document.querySelector("#saveBtn4");
+          var saveBtn5 = document.querySelector("#saveBtn5");
+          var saveBtn6 = document.querySelector("#saveBtn6");
+          var nineTimeSlot = document.getElementById("9");
+          var tenTimeSlot = document.getElementById("10");
+          var elevenTimeSlot = document.getElementById("11");
+          var twelveTimeSlot = document.getElementById("12");
+          var oneTimeSlot = document.getElementById("13");
+          var twoTimeSlot = document.getElementById("14");
+          var threeTimeSlot = document.getElementById("15");
+          var fourTimeSlot = document.getElementById("16");
+          var fiveTimeSlot = document.getElementById("17");
+          var sixTimeSlot = document.getElementById("18");
+          console.log(tenTimeSlot.id);
+          
+          function setColor(id, currentHour, time){
+            // var currentHour = moment().hour(); // Number
+
+            if (currentHour == id){
+              time.classList.add("present");
+            }
+            else if (currentHour < id){
+              time.classList.add("future");
+            }
+            else {
+              time.classList.add("past");
+            }
+          }
+          
+          function storeText(key, textContent) {
+            
+            localStorage.setItem(key, textContent);
+          }
+                    
+                            
+          function renderText() {
+            savedNineNote.textContent = localStorage.getItem("nineNote");
+            savedTenNote.textContent = localStorage.getItem("tenNote");
+            savedElevenNote.textContent = localStorage.getItem("elevenNote");
+            savedTwelveNote.textContent = localStorage.getItem("twelveNote");
+            savedOneNote.textContent = localStorage.getItem("oneNote");
+            savedTwoNote.textContent = localStorage.getItem("twoNote");
+            savedThreeNote.textContent = localStorage.getItem("threeNote");
+            savedFourNote.textContent = localStorage.getItem("fourNote");
+            savedFiveNote.textContent = localStorage.getItem("fiveNote");
+            savedSixNote.textContent = localStorage.getItem("sixNote");
+          }
+
+          saveBtn9.addEventListener("click", function(event){
+            storeText("nineNote", $('textarea#nineNote').val());
+          })
+          saveBtn10.addEventListener("click", function(event){
+            storeText("tenNote", $('textarea#tenNote').val());
+          })
+          saveBtn11.addEventListener("click", function(event){
+            storeText("elevenNote", $('textarea#elevenNote').val());
+          })
+          saveBtn12.addEventListener("click", function(event){
+            storeText("twelveNote", $('textarea#twelveNote').val());
+          })
+          saveBtn1.addEventListener("click", function(event){
+            storeText("oneNote", $('textarea#oneNote').val());
+          })
+          saveBtn2.addEventListener("click", function(event){
+            storeText("twoNote", $('textarea#twoNote').val());
+          })
+          saveBtn3.addEventListener("click", function(event){
+            storeText("threeNote", $('textarea#threeNote').val());
+          })
+          saveBtn4.addEventListener("click", function(event){
+            storeText("fourNote", $('textarea#fourNote').val());
+          })
+          saveBtn5.addEventListener("click", function(event){
+            storeText("fiveNote", $('textarea#fiveNote').val());
+          })
+          saveBtn6.addEventListener("click", function(event){
+            storeText("sixNote", $('textarea#sixNote').val());
+          })
+          
+          renderText();
+          var currentHour = moment().hour();
+          setColor('9', currentHour, nineTimeSlot);
+          setColor('10', currentHour, tenTimeSlot);
+          setColor('11', currentHour, elevenTimeSlot);
+          setColor('12', currentHour, twelveTimeSlot);
+          setColor('13', currentHour, oneTimeSlot);
+          setColor('14', currentHour, twoTimeSlot);
+          setColor('15', currentHour, threeTimeSlot);
+          setColor('16', currentHour, fourTimeSlot);
+          setColor('17', currentHour, fiveTimeSlot);
+          setColor('18', currentHour, sixTimeSlot);
+    </script>
   </body>
+        
 </html>
